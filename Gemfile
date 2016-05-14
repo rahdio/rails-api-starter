@@ -1,17 +1,15 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.5'
-
 gem 'rails-api'
-
 gem 'spring', :group => :development
-
-
 gem 'sqlite3'
+gem "bcrypt"
+gem "validates_email_format_of"
 
-
-
+group :test do
+  gem "faker"
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
