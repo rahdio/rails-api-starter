@@ -7,6 +7,10 @@ gem 'sqlite3'
 gem "bcrypt"
 gem "validates_email_format_of"
 
+group :development do
+  gem "pry"
+end
+
 group :test do
   gem "faker"
 end
