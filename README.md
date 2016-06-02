@@ -1,4 +1,6 @@
 #Rails API Starter
+[![Build Status](https://semaphoreci.com/api/v1/rahdio/rails-api-starter/branches/master/badge.svg)](https://semaphoreci.com/rahdio/rails-api-starter) [![Code Climate](https://codeclimate.com/github/rahdio/rails-api-starter/badges/gpa.svg)](https://codeclimate.com/github/rahdio/rails-api-starter) [![Test Coverage](https://codeclimate.com/github/rahdio/rails-api-starter/badges/coverage.svg)](https://codeclimate.com/github/rahdio/rails-api-starter/coverage)
+
 
 Rails starter template for bootstrapping Rails API projects.
 
