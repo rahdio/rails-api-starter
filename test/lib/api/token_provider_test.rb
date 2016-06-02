@@ -14,7 +14,7 @@ class TokenProviderTest < ActiveSupport::TestCase
 
     assert_equal date.year, today.year
     assert_equal date.month, today.month
-    assert_equal (date.day - today.day), 2
+    assert_equal((date.day - today.day), 2)
   end
 
   def test_token_is_successfully_decoded
