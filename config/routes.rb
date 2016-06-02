@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   namespace :api, path: "" do
     api_version_handler "1" do
       scope "auth" do
-        post "login" => "sessions#auth"
-        post "logout" => "sessions#destroy"
+        post "login" => "sessions#login"
+        get "logout" => "sessions#logout"
       end
 
       scope "users" do

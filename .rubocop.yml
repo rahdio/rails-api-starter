@@ -2,6 +2,9 @@ AllCops:
   Exclude:
     - "vendor/**/*"
     - "db/schema.rb"
+    - "bin/**/*"
+    - "db/**/*"
+    - "config/**/*"
   UseCache: false
 Style/CollectionMethods:
   Description: Preferred collection methods.
@@ -230,4 +233,6 @@ Lint/LiteralInCondition:
   Enabled: false
 Lint/LiteralInInterpolation:
   Description: Checks for literals used in interpolation.
+  Enabled: false
+Style/IndentationConsistency:
   Enabled: false
