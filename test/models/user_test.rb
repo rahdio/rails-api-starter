@@ -1,6 +1,6 @@
 require "test_helper"
 
-class UserTest < ActiveSupport::TestCase
+class UserTest < BaseTest
   def setup
     @user = User.new
   end
@@ -20,6 +20,8 @@ class UserTest < ActiveSupport::TestCase
   def test_that_it_fails_to_save_without_an_email
     @user.name = Faker::Name.name
     @user.api_token = Faker::Bitcoin.testnet_address
+    @user.password = @user.password_confirmation = Faker::Internet.password
     refute @user.save, "Email field required"
+    assert_equal @user.get_error, "Email can't be blank"
   end
 end
