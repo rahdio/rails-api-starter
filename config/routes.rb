@@ -5,14 +5,10 @@ Rails.application.routes.draw do
 
   namespace :api, path: "" do
     api_version_handler "1" do
-      scope "auth" do
-        post "login" => "sessions#login"
-        get "logout" => "sessions#logout"
+      resources :sessions, only: [:create] do
+        delete '/', on: :collection, action: 'destroy'
       end
-
-      scope "users" do
-        post "new" => "users#create"
-      end
+      resources :users, only: [:create]
     end
   end
 end
