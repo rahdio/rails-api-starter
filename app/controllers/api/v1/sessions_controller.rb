@@ -1,9 +1,9 @@
 module Api
   module V1
     class SessionsController < ApplicationController
-      before_action :authenticate_token, only: [:logout]
+      before_action :authenticate_token, only: [:destroy]
 
-      def login
+      def create
         auth_command = Api::UserAuthentication.call(
           params[:email],
           params[:password]
@@ -11,7 +11,7 @@ module Api
         respond_with_command auth_command
       end
 
-      def logout
+      def destroy
         current_user.update api_token: nil
         render json: { "message": "Logged out successfully." }
       end
