@@ -1,4 +1,4 @@
-#Rails API Starter
+# Rails API Starter
 [![Build Status](https://semaphoreci.com/api/v1/rahdio/rails-api-starter/branches/master/badge.svg)](https://semaphoreci.com/rahdio/rails-api-starter) [![Code Climate](https://codeclimate.com/github/rahdio/rails-api-starter/badges/gpa.svg)](https://codeclimate.com/github/rahdio/rails-api-starter) [![Test Coverage](https://codeclimate.com/github/rahdio/rails-api-starter/badges/coverage.svg)](https://codeclimate.com/github/rahdio/rails-api-starter/coverage)
 
 
@@ -20,7 +20,7 @@ Once secrets are changed, run:
 This installs dependencies present in the Gemfile.
 
 
-##User Authentication
+## User Authentication
 User Authentication is handled through JSON web tokens. The authentication flow is as follows:
   1. Create an account
   2. Log into your account to obtain JSON web token
@@ -40,21 +40,21 @@ where
   `<api-token>` in both cases should be replaced by actual token assigned
   
 
-####Creating an Account
+#### Creating an Account
 To create an account, you'll need to send in user attributes in JSON format. Required attributes to create an account are:
 
   `name`, `email`, `password`, `password_confirmation`
 
 If arguments are incorrect, a message is returned stating which entry was incorrect
 
-####Logging in with a valid Account
+#### Logging in with a valid Account
 To log in to an account, you'll need to send in account attributes in JSON format. Required attributes to login to your account are:
 
   `email`, `password`  
 
 A successful response to the Login request contains the JSON web token assigned, and its expiry date.
 
-##API endpoints.
+## API endpoints.
 
 | EndPoint                                |   Functionality                      |
 | --------------------------------------- | ------------------------------------:|
